@@ -81,6 +81,23 @@ LDS - Load with Direct Addressing
 
 */
 
+uint8_t UPDI::lds_b_b(uint8_t address) {
+#ifdef DEBUG_LDS
+  DBG::updi_lds(address);
+#endif
+  UPDI_io::put(UPDI::SYNCH);
+  UPDI_io::put(0x00);
+  UPDI_io::put(address);
+#ifdef DEBUG_LDS
+  uint8_t resp= UPDI_io::get();
+  DBG::updi_res(resp);
+  return resp;
+#else
+  return UPDI_io::get();
+#endif
+}
+
+
 uint8_t UPDI::lds_b(uint16_t address) {
 #ifdef DEBUG_LDS
   DBG::updi_lds(address);
@@ -159,6 +176,17 @@ STS - Byte oriented Store with Direct Addressing
 */
 
 
+void UPDI::sts_b_b(uint8_t address, uint8_t data) {
+#ifdef DEBUG_STS
+  DBG::updi_sts(address,data);
+#endif
+  UPDI_io::put(UPDI::SYNCH);
+  UPDI_io::put(0x40);
+  UPDI_io::put(address);
+  UPDI_io::get();
+  UPDI_io::put(data);
+  UPDI_io::get();
+}
 
 void UPDI::sts_b(uint16_t address, uint8_t data) {
 #ifdef DEBUG_STS

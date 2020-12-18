@@ -25,6 +25,7 @@
 namespace JICE_io {
   // Function prototypes
   uint8_t put(char c);
+  bool dataavail();
   uint8_t get(void);
   void init(void);
   void flush(void);

@@ -1,0 +1,1 @@
+/cygdrive/z/pedro/Projects/avrdude/avrdude.exe -c arduino -P COM3 -b 57600 -B 50  -p atmega328p -v -U fl:w:build/JTAG2UPDI.hex

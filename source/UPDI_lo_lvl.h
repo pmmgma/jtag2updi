@@ -41,11 +41,13 @@ namespace UPDI {
   void stcs(reg, uint8_t);
   uint8_t ldcs(reg);
 
+  uint8_t lds_b_b(uint8_t);
   uint8_t lds_b(uint16_t);
   uint16_t lds_w(uint16_t);
   uint8_t lds_b_l(uint32_t);
   uint16_t lds_w_l(uint32_t);
 
+  void sts_b_b(uint8_t address, uint8_t data);
   void sts_b(uint16_t address, uint8_t data); /* Store data at address */
   void sts_w(uint16_t, uint16_t);
   void sts_b_l(uint32_t, uint8_t);

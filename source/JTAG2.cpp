@@ -20,6 +20,11 @@ uint8_t JTAG2::ConnectedTo;
 // *** STK500 packet ***
 JTAG2::packet_t JTAG2::packet;
 
+bool JTAG2::terminalmode=false;
+
+uint8_t JTAG2::rxcnt=0xFF;
+uint8_t JTAG2::txcnt=0xFF;
+
 // Local objects
 namespace {
   // *** Local variables ***
@@ -46,11 +51,21 @@ namespace {
 
 // *** Packet functions ***
 bool JTAG2::receive() {
-  while (JICE_io::get() != MESSAGE_START) {
-    #ifndef DISABLE_HOST_TIMEOUT
-    if ((SYS::checkTimeouts() & WAIT_FOR_HOST)) return false;
-    #endif
+  uint8_t ch;
+  while (true) {
+	if (JICE_io::dataavail()) {
+		ch=JICE_io::get();
+		if (ch==MESSAGE_START) break;
+		
+		JTAG2::debug_terminaltx(ch);
+		
+		#ifndef DISABLE_HOST_TIMEOUT
+		if ((SYS::checkTimeouts() & WAIT_FOR_HOST)) return false;
+		#endif	
+	}
+	JTAG2::debug_terminalrx();
   }
+  
   uint16_t crc = CRC::next(MESSAGE_START);
   for (uint16_t i = 0; i < 6; i++) {
     crc = CRC::next(packet.raw[i] = JICE_io::get(), crc);
@@ -62,6 +77,7 @@ bool JTAG2::receive() {
     crc = CRC::next(packet.body[i] = JICE_io::get(), crc);
   }
   if ((uint16_t)(JICE_io::get() | (JICE_io::get() << 8)) != crc) return false;
+  JTAG2::terminalmode=false;
   return true;
 }
 
@@ -418,6 +434,50 @@ void JTAG2::erase() {
       set_status(RSP_FAILED);
   }
 }
+
+
+void JTAG2::terminal() {
+	JTAG2::terminalmode=true;
+	UPDI::sts_b_b(0x1e,JTAG2::txcnt=0x7f);	
+	JTAG2::rxcnt=UPDI::lds_b_b(0x1c);
+	set_status(RSP_OK);
+}
+
+void JTAG2::debug_terminalrx() {
+	uint8_t cnt;
+	uint8_t data;
+	
+	do {
+	
+		if (!JTAG2::terminalmode) break;
+		
+		cnt=UPDI::lds_b_b(0x1c);
+		if (!(cnt & 0x80)) break;
+		
+		if (JTAG2::rxcnt==cnt) break;
+		JTAG2::rxcnt=cnt;
+		
+		data=UPDI::lds_b_b(0x1d);
+		JICE_io::put(data);
+
+	} while (0);
+}
+
+
+void JTAG2::debug_terminaltx(char ch) {
+	
+	do {
+	
+		if (!JTAG2::terminalmode) break;
+		
+		UPDI::sts_b_b(0x1f,ch);
+		UPDI::sts_b_b(0x1e,JTAG2::txcnt=(JTAG2::txcnt+1) | 0x80);	
+	
+	} while (0);
+	
+}
+
+
 
 // *** Local functions definition ***
 // These functions will be called only once; They just exist as separate functions to declutter the main flow of code.

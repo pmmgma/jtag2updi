@@ -1,0 +1,225 @@
+
+main.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00803f00  00000174  000001e8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000174  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000001ea  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000021c  2**2
+                  CONTENTS, READONLY
+  4 .debug_info   00001410  00000000  00000000  00000258  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000012fa  00000000  00000000  00001668  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000136  00000000  00000000  00002962  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    0000089b  00000000  00000000  00002a98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	19 c0       	rjmp	.+50     	; 0x34 <__ctors_end>
+   2:	2b c0       	rjmp	.+86     	; 0x5a <__bad_interrupt>
+   4:	2a c0       	rjmp	.+84     	; 0x5a <__bad_interrupt>
+   6:	29 c0       	rjmp	.+82     	; 0x5a <__bad_interrupt>
+   8:	28 c0       	rjmp	.+80     	; 0x5a <__bad_interrupt>
+   a:	27 c0       	rjmp	.+78     	; 0x5a <__bad_interrupt>
+   c:	26 c0       	rjmp	.+76     	; 0x5a <__bad_interrupt>
+   e:	25 c0       	rjmp	.+74     	; 0x5a <__bad_interrupt>
+  10:	24 c0       	rjmp	.+72     	; 0x5a <__bad_interrupt>
+  12:	23 c0       	rjmp	.+70     	; 0x5a <__bad_interrupt>
+  14:	22 c0       	rjmp	.+68     	; 0x5a <__bad_interrupt>
+  16:	21 c0       	rjmp	.+66     	; 0x5a <__bad_interrupt>
+  18:	20 c0       	rjmp	.+64     	; 0x5a <__bad_interrupt>
+  1a:	1f c0       	rjmp	.+62     	; 0x5a <__bad_interrupt>
+  1c:	1e c0       	rjmp	.+60     	; 0x5a <__bad_interrupt>
+  1e:	1d c0       	rjmp	.+58     	; 0x5a <__bad_interrupt>
+  20:	1c c0       	rjmp	.+56     	; 0x5a <__bad_interrupt>
+  22:	1b c0       	rjmp	.+54     	; 0x5a <__bad_interrupt>
+  24:	1a c0       	rjmp	.+52     	; 0x5a <__bad_interrupt>
+  26:	19 c0       	rjmp	.+50     	; 0x5a <__bad_interrupt>
+  28:	18 c0       	rjmp	.+48     	; 0x5a <__bad_interrupt>
+  2a:	17 c0       	rjmp	.+46     	; 0x5a <__bad_interrupt>
+  2c:	16 c0       	rjmp	.+44     	; 0x5a <__bad_interrupt>
+  2e:	15 c0       	rjmp	.+42     	; 0x5a <__bad_interrupt>
+  30:	14 c0       	rjmp	.+40     	; 0x5a <__bad_interrupt>
+  32:	13 c0       	rjmp	.+38     	; 0x5a <__bad_interrupt>
+
+00000034 <__ctors_end>:
+  34:	11 24       	eor	r1, r1
+  36:	1f be       	out	0x3f, r1	; 63
+  38:	cf ef       	ldi	r28, 0xFF	; 255
+  3a:	cd bf       	out	0x3d, r28	; 61
+  3c:	df e3       	ldi	r29, 0x3F	; 63
+  3e:	de bf       	out	0x3e, r29	; 62
+
+00000040 <__do_copy_data>:
+  40:	1f e3       	ldi	r17, 0x3F	; 63
+  42:	a0 e0       	ldi	r26, 0x00	; 0
+  44:	bf e3       	ldi	r27, 0x3F	; 63
+  46:	e4 e7       	ldi	r30, 0x74	; 116
+  48:	f1 e0       	ldi	r31, 0x01	; 1
+  4a:	02 c0       	rjmp	.+4      	; 0x50 <__do_copy_data+0x10>
+  4c:	05 90       	lpm	r0, Z+
+  4e:	0d 92       	st	X+, r0
+  50:	a2 30       	cpi	r26, 0x02	; 2
+  52:	b1 07       	cpc	r27, r17
+  54:	d9 f7       	brne	.-10     	; 0x4c <__do_copy_data+0xc>
+  56:	81 d0       	rcall	.+258    	; 0x15a <main>
+  58:	8b c0       	rjmp	.+278    	; 0x170 <_exit>
+
+0000005a <__bad_interrupt>:
+  5a:	d2 cf       	rjmp	.-92     	; 0x0 <__vectors>
+
+0000005c <debug_init>:
+  5c:	cf 93       	push	r28
+  5e:	df 93       	push	r29
+  60:	cd b7       	in	r28, 0x3d	; 61
+  62:	de b7       	in	r29, 0x3e	; 62
+  64:	8e e1       	ldi	r24, 0x1E	; 30
+  66:	90 e0       	ldi	r25, 0x00	; 0
+  68:	2f e7       	ldi	r18, 0x7F	; 127
+  6a:	fc 01       	movw	r30, r24
+  6c:	20 83       	st	Z, r18
+  6e:	8c e1       	ldi	r24, 0x1C	; 28
+  70:	90 e0       	ldi	r25, 0x00	; 0
+  72:	2f e7       	ldi	r18, 0x7F	; 127
+  74:	fc 01       	movw	r30, r24
+  76:	20 83       	st	Z, r18
+  78:	00 00       	nop
+  7a:	df 91       	pop	r29
+  7c:	cf 91       	pop	r28
+  7e:	08 95       	ret
+
+00000080 <debug_SendChar>:
+  80:	cf 93       	push	r28
+  82:	df 93       	push	r29
+  84:	cd b7       	in	r28, 0x3d	; 61
+  86:	de b7       	in	r29, 0x3e	; 62
+  88:	25 97       	sbiw	r28, 0x05	; 5
+  8a:	cd bf       	out	0x3d, r28	; 61
+  8c:	de bf       	out	0x3e, r29	; 62
+  8e:	8d 83       	std	Y+5, r24	; 0x05
+  90:	8d e1       	ldi	r24, 0x1D	; 29
+  92:	90 e0       	ldi	r25, 0x00	; 0
+  94:	2d 81       	ldd	r18, Y+5	; 0x05
+  96:	fc 01       	movw	r30, r24
+  98:	20 83       	st	Z, r18
+  9a:	8c e1       	ldi	r24, 0x1C	; 28
+  9c:	90 e0       	ldi	r25, 0x00	; 0
+  9e:	20 91 00 3f 	lds	r18, 0x3F00	; 0x803f00 <__DATA_REGION_ORIGIN__>
+  a2:	2f 5f       	subi	r18, 0xFF	; 255
+  a4:	20 68       	ori	r18, 0x80	; 128
+  a6:	20 93 00 3f 	sts	0x3F00, r18	; 0x803f00 <__DATA_REGION_ORIGIN__>
+  aa:	20 91 00 3f 	lds	r18, 0x3F00	; 0x803f00 <__DATA_REGION_ORIGIN__>
+  ae:	fc 01       	movw	r30, r24
+  b0:	20 83       	st	Z, r18
+  b2:	19 82       	std	Y+1, r1	; 0x01
+  b4:	1a 82       	std	Y+2, r1	; 0x02
+  b6:	1b 82       	std	Y+3, r1	; 0x03
+  b8:	1c 82       	std	Y+4, r1	; 0x04
+  ba:	0c c0       	rjmp	.+24     	; 0xd4 <debug_SendChar+0x54>
+  bc:	00 00       	nop
+  be:	89 81       	ldd	r24, Y+1	; 0x01
+  c0:	9a 81       	ldd	r25, Y+2	; 0x02
+  c2:	ab 81       	ldd	r26, Y+3	; 0x03
+  c4:	bc 81       	ldd	r27, Y+4	; 0x04
+  c6:	01 96       	adiw	r24, 0x01	; 1
+  c8:	a1 1d       	adc	r26, r1
+  ca:	b1 1d       	adc	r27, r1
+  cc:	89 83       	std	Y+1, r24	; 0x01
+  ce:	9a 83       	std	Y+2, r25	; 0x02
+  d0:	ab 83       	std	Y+3, r26	; 0x03
+  d2:	bc 83       	std	Y+4, r27	; 0x04
+  d4:	89 81       	ldd	r24, Y+1	; 0x01
+  d6:	9a 81       	ldd	r25, Y+2	; 0x02
+  d8:	ab 81       	ldd	r26, Y+3	; 0x03
+  da:	bc 81       	ldd	r27, Y+4	; 0x04
+  dc:	8c 31       	cpi	r24, 0x1C	; 28
+  de:	92 40       	sbci	r25, 0x02	; 2
+  e0:	a1 05       	cpc	r26, r1
+  e2:	b1 05       	cpc	r27, r1
+  e4:	58 f3       	brcs	.-42     	; 0xbc <debug_SendChar+0x3c>
+  e6:	00 00       	nop
+  e8:	25 96       	adiw	r28, 0x05	; 5
+  ea:	cd bf       	out	0x3d, r28	; 61
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	df 91       	pop	r29
+  f0:	cf 91       	pop	r28
+  f2:	08 95       	ret
+
+000000f4 <debug_RecvRdy>:
+  f4:	cf 93       	push	r28
+  f6:	df 93       	push	r29
+  f8:	1f 92       	push	r1
+  fa:	cd b7       	in	r28, 0x3d	; 61
+  fc:	de b7       	in	r29, 0x3e	; 62
+  fe:	8e e1       	ldi	r24, 0x1E	; 30
+ 100:	90 e0       	ldi	r25, 0x00	; 0
+ 102:	fc 01       	movw	r30, r24
+ 104:	80 81       	ld	r24, Z
+ 106:	89 83       	std	Y+1, r24	; 0x01
+ 108:	89 81       	ldd	r24, Y+1	; 0x01
+ 10a:	88 23       	and	r24, r24
+ 10c:	2c f0       	brlt	.+10     	; 0x118 <__DATA_REGION_LENGTH__+0x18>
+ 10e:	89 81       	ldd	r24, Y+1	; 0x01
+ 110:	80 93 01 3f 	sts	0x3F01, r24	; 0x803f01 <debug_rxcnt>
+ 114:	80 e0       	ldi	r24, 0x00	; 0
+ 116:	08 c0       	rjmp	.+16     	; 0x128 <__DATA_REGION_LENGTH__+0x28>
+ 118:	80 91 01 3f 	lds	r24, 0x3F01	; 0x803f01 <debug_rxcnt>
+ 11c:	99 81       	ldd	r25, Y+1	; 0x01
+ 11e:	98 17       	cp	r25, r24
+ 120:	11 f4       	brne	.+4      	; 0x126 <__DATA_REGION_LENGTH__+0x26>
+ 122:	80 e0       	ldi	r24, 0x00	; 0
+ 124:	01 c0       	rjmp	.+2      	; 0x128 <__DATA_REGION_LENGTH__+0x28>
+ 126:	81 e0       	ldi	r24, 0x01	; 1
+ 128:	0f 90       	pop	r0
+ 12a:	df 91       	pop	r29
+ 12c:	cf 91       	pop	r28
+ 12e:	08 95       	ret
+
+00000130 <debug_GetChar>:
+ 130:	cf 93       	push	r28
+ 132:	df 93       	push	r29
+ 134:	cd b7       	in	r28, 0x3d	; 61
+ 136:	de b7       	in	r29, 0x3e	; 62
+ 138:	00 00       	nop
+ 13a:	dc df       	rcall	.-72     	; 0xf4 <debug_RecvRdy>
+ 13c:	88 23       	and	r24, r24
+ 13e:	e9 f3       	breq	.-6      	; 0x13a <debug_GetChar+0xa>
+ 140:	8e e1       	ldi	r24, 0x1E	; 30
+ 142:	90 e0       	ldi	r25, 0x00	; 0
+ 144:	fc 01       	movw	r30, r24
+ 146:	80 81       	ld	r24, Z
+ 148:	80 93 01 3f 	sts	0x3F01, r24	; 0x803f01 <debug_rxcnt>
+ 14c:	8f e1       	ldi	r24, 0x1F	; 31
+ 14e:	90 e0       	ldi	r25, 0x00	; 0
+ 150:	fc 01       	movw	r30, r24
+ 152:	80 81       	ld	r24, Z
+ 154:	df 91       	pop	r29
+ 156:	cf 91       	pop	r28
+ 158:	08 95       	ret
+
+0000015a <main>:
+ 15a:	cf 93       	push	r28
+ 15c:	df 93       	push	r29
+ 15e:	cd b7       	in	r28, 0x3d	; 61
+ 160:	de b7       	in	r29, 0x3e	; 62
+ 162:	7c df       	rcall	.-264    	; 0x5c <debug_init>
+ 164:	c7 df       	rcall	.-114    	; 0xf4 <debug_RecvRdy>
+ 166:	88 23       	and	r24, r24
+ 168:	e9 f3       	breq	.-6      	; 0x164 <main+0xa>
+ 16a:	e2 df       	rcall	.-60     	; 0x130 <debug_GetChar>
+ 16c:	89 df       	rcall	.-238    	; 0x80 <debug_SendChar>
+ 16e:	fa cf       	rjmp	.-12     	; 0x164 <main+0xa>
+
+00000170 <_exit>:
+ 170:	f8 94       	cli
+
+00000172 <__stop_program>:
+ 172:	ff cf       	rjmp	.-2      	; 0x172 <__stop_program>

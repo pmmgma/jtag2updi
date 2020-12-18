@@ -1,17 +1,20 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
-                              c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o (exit)
-c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
-                              x:\ccn2Phmh.ltrans0.ltrans.o (__do_copy_data)
-c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
-                              x:\ccn2Phmh.ltrans0.ltrans.o (__do_clear_bss)
+b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                              b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o (exit)
+b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                              C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o (__do_copy_data)
+b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                              C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o (__do_clear_bss)
 
 Discarded input sections
 
- .data          0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .bss           0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .data          0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
  .text          0x00000000        0x0 jtag2updi.o (symbol from plugin)
+ .text          0x00000000        0x0 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .data          0x00000000        0x0 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .bss           0x00000000        0x0 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
  .text          0x00000000        0x0 JTAG2.o (symbol from plugin)
  .gnu.linkonce.t._ZN4UPDI8CPU_modeILh239EEEhv
                 0x00000000        0x0 JTAG2.o (symbol from plugin)
@@ -33,7 +36,7 @@ Discarded input sections
                 0x00000000        0x0 JTAG2.o (symbol from plugin)
  .gnu.linkonce.t._ZN3NVM7commandILb1EEEvh
                 0x00000000        0x0 JTAG2.o (symbol from plugin)
- .text          0x00000000        0x0 jice_io.o (symbol from plugin)
+ .text          0x00000000        0x0 JICE_io.o (symbol from plugin)
  .text          0x00000000        0x0 UPDI_lo_lvl.o (symbol from plugin)
  .text          0x00000000        0x0 UPDI_hi_lvl.o (symbol from plugin)
  .gnu.linkonce.t._ZN4UPDI8CPU_modeILh14EEEhv
@@ -42,61 +45,61 @@ Discarded input sections
  .text          0x00000000        0x0 updi_io_soft.o (symbol from plugin)
  .text          0x00000000        0x0 crc16.o (symbol from plugin)
  .text          0x00000000        0x0 sys.o (symbol from plugin)
- .text          0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .data          0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .bss           0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .text          0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .data          0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .bss           0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .text          0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
- .data          0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
- .bss           0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.mul
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x00000000        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x00000000        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
-text             0x00000000         0x00020000         xr
-data             0x00800060         0x0000ffa0         rw !x
-eeprom           0x00810000         0x00010000         rw !x
+text             0x00000000         0x00008000         xr
+data             0x00800100         0x00000800         rw !x
+eeprom           0x00810000         0x00000400         rw !x
 fuse             0x00820000         0x00000003         rw !x
 lock             0x00830000         0x00000400         rw !x
 signature        0x00840000         0x00000400         rw !x
@@ -106,31 +109,33 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 Address of section .data set to 0x800100
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
 LOAD jtag2updi.o
-LOAD x:\ccn2Phmh.ltrans0.ltrans.o
+LOAD C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
 LOAD JTAG2.o
-LOAD jice_io.o
+LOAD JICE_io.o
 LOAD UPDI_lo_lvl.o
 LOAD UPDI_hi_lvl.o
 LOAD updi_io.o
 LOAD updi_io_soft.o
 LOAD crc16.o
 LOAD sys.o
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 START GROUP
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libm.a
 END GROUP
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libm.a
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 START GROUP
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libm.a
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a
-LOAD c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libatmega328p.a
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a
+LOAD b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libatmega328p.a
 END GROUP
-                0x00020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
-                0x0000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
-                0x00010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                0x00000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x00800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x00008000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x00000800]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x00000400]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
                 [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
                 0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
                 0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
@@ -226,9 +231,9 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xc78
+.text           0x00000000      0xd64
  *(.vectors)
- .vectors       0x00000000       0x68 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .vectors       0x00000000       0x68 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
@@ -242,7 +247,16 @@ END GROUP
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
- .progmem.data  0x00000068      0x23d x:\ccn2Phmh.ltrans0.ltrans.o
+ .progmem.data._ZN12_GLOBAL__N_1L8sgn_respE
+                0x00000068       0x1d C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .progmem.data._ZN4UPDI10Chip_EraseE
+                0x00000085        0x8 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .progmem.data._ZN12_GLOBAL__N_1L8baud_tblE
+                0x0000008d       0x10 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .progmem.data._ZN4UPDI8NVM_ProgE
+                0x0000009d        0x8 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .progmem.data._ZN12_GLOBAL__N_1L9crc_tableE
+                0x000000a5      0x200 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
                 0x000002a6                . = ALIGN (0x2)
  *fill*         0x000002a5        0x1 
  *(.jumptables)
@@ -258,20 +272,20 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000002a6        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .init0         0x000002a6        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
                 0x000002a6                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000002a6        0xc c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .init2         0x000002a6        0xc b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000002b2       0x16 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .init4         0x000002b2       0x16 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                 0x000002b2                __do_copy_data
- .init4         0x000002c8       0x10 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .init4         0x000002c8       0x10 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                 0x000002c8                __do_clear_bss
  *(.init4)
  *(.init5)
@@ -283,10 +297,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000002d8        0x4 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .init9         0x000002d8        0x4 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x000002dc        0x2 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .text          0x000002dc        0x2 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
                 0x000002dc                __vector_22
                 0x000002dc                __vector_1
                 0x000002dc                __vector_24
@@ -313,16 +327,72 @@ END GROUP
                 0x000002dc                __vector_16
                 0x000002dc                __vector_18
                 0x000002dc                __vector_20
- .text          0x000002de      0x3ca x:\ccn2Phmh.ltrans0.ltrans.o
-                0x000006a8                . = ALIGN (0x2)
+                0x000002de                . = ALIGN (0x2)
  *(.text.*)
- .text.startup  0x000006a8      0x5cc x:\ccn2Phmh.ltrans0.ltrans.o
-                0x000006a8                main
-                0x00000c74                . = ALIGN (0x2)
+ .text._ZN3CRC4nextEhj
+                0x000002de       0x1a C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN7UPDI_io3putEc
+                0x000002f8       0x3e C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN7UPDI_io3getEv
+                0x00000336       0x44 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI5lds_bEj.constprop.3
+                0x0000037a       0x12 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI4ldcsENS_3regE.constprop.2
+                0x0000038c        0xa C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI7stinc_bEh
+                0x00000396       0x14 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI7ldptr_wEv
+                0x000003aa       0x1e C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI7stptr_lEm
+                0x000003c8       0x28 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI7stptr_wEj
+                0x000003f0       0x1e C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI7sts_b_lEmh
+                0x0000040e       0x32 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI5sts_bEjh
+                0x00000440       0x2a C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI7sts_b_bEhh
+                0x0000046a       0x20 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI7lds_b_bEh
+                0x0000048a       0x14 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI3repEh
+                0x0000049e       0x12 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI4stcsENS_3regEh
+                0x000004b0       0x1a C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI9CPU_resetEv
+                0x000004ca       0x36 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN7JICE_io3getEv
+                0x00000500       0x10 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN7JICE_io3putEc
+                0x00000510       0x16 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZZN12_GLOBAL__N_118NVM_buffered_writeEjjhhENKUlhhE_clEhh.isra.5
+                0x00000526       0x6e C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN3NVM4waitILb0EEEvv
+                0x00000594        0x8 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN6NVM_v27commandILb0EEEvh
+                0x0000059c        0xc C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN6NVM_v24waitILb0EEEvv
+                0x000005a8       0x1c C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN4UPDI9write_keyIK5flashIhEEEvRA8_T_
+                0x000005c4       0x2c C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN5JTAG210set_statusEh
+                0x000005f0       0x10 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN5JTAG22goEv
+                0x00000600       0x14 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN5JTAG214leave_progmodeEv
+                0x00000614       0x42 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZN5JTAG214enter_progmodeEv
+                0x00000656       0x72 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text._ZL10send_breakv
+                0x000006c8       0x26 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .text.startup.main
+                0x000006ee      0x672 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+                0x000006ee                main
+                0x00000d60                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000c74        0x0 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
-                0x00000c74                _exit
-                0x00000c74                exit
+ .fini9         0x00000d60        0x0 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000d60                _exit
+                0x00000d60                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -341,39 +411,57 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000c74        0x4 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000d60        0x4 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000c78                _etext = .
+                0x00000d64                _etext = .
 
-.data           0x00800100        0x2 load address 0x00000c78
+.data           0x00800100        0x4 load address 0x00000d64
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800100        0x1 x:\ccn2Phmh.ltrans0.ltrans.o
  *(.data*)
+ .data._ZN5JTAG25rxcntE
+                0x00800100        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .data._ZN5JTAG25txcntE
+                0x00800101        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .data._ZN12_GLOBAL__N_111nvm_versionE
+                0x00800102        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x00800102                . = ALIGN (0x2)
- *fill*         0x00800101        0x1 
-                0x00800102                _edata = .
-                0x00800102                PROVIDE (__data_end, .)
+                0x00800104                . = ALIGN (0x2)
+ *fill*         0x00800103        0x1 
+                0x00800104                _edata = .
+                0x00800104                PROVIDE (__data_end, .)
 
-.bss            0x00800102      0x2c8
-                0x00800102                PROVIDE (__bss_start, .)
+.bss            0x00800104      0x2c9
+                0x00800104                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800102      0x2c8 x:\ccn2Phmh.ltrans0.ltrans.o
  *(.bss*)
+ .bss._ZN5JTAG218PARAM_EMU_MODE_VALE
+                0x00800104        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .bss._ZN12_GLOBAL__N_115eeprom_pagesizeE
+                0x00800105        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .bss._ZN12_GLOBAL__N_114flash_pagesizeE
+                0x00800106        0x2 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .bss._ZN5JTAG212terminalmodeE
+                0x00800108        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .bss._ZN5JTAG219PARAM_BAUD_RATE_VALE
+                0x00800109        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .bss._ZN5JTAG211ConnectedToE
+                0x0080010a        0x1 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+ .bss._ZN5JTAG26packetE
+                0x0080010b      0x2c2 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
  *(COMMON)
-                0x008003ca                PROVIDE (__bss_end, .)
-                0x00000c78                __data_load_start = LOADADDR (.data)
-                0x00000c7a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x008003cd                PROVIDE (__bss_end, .)
+                0x00000d64                __data_load_start = LOADADDR (.data)
+                0x00000d68                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008003ca        0x0
+.noinit         0x008003cd        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x008003ca                _end = .
+                0x008003cd                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -413,15 +501,15 @@ END GROUP
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment        0x00000000       0x11
+.comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x11 x:\ccn2Phmh.ltrans0.ltrans.o
-                                 0x12 (size before relaxing)
+ .comment       0x00000000       0x30 C:\cygwin64\tmp\ccm6dclb.ltrans0.ltrans.o
+                                 0x31 (size before relaxing)
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
  .note.gnu.avr.deviceinfo
-                0x00000000       0x40 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000       0x40 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -438,45 +526,30 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x60
+.debug_aranges
  *(.debug_aranges)
- .debug_aranges
-                0x00000000       0x20 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .debug_aranges
-                0x00000020       0x20 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .debug_aranges
-                0x00000040       0x20 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x825
+.debug_info     0x00000000      0x5f4
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x5f4 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_info    0x000005f4       0xbb c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .debug_info    0x000006af       0xbb c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .debug_info    0x0000076a       0xbb c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_info    0x00000000      0x5f4 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
 
-.debug_abbrev   0x00000000      0x5de
+.debug_abbrev   0x00000000      0x5a2
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x5a2 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2       0x14 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .debug_abbrev  0x000005b6       0x14 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .debug_abbrev  0x000005ca       0x14 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x00000000      0x5a2 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
 
-.debug_line     0x00000000      0x19a
+.debug_line     0x00000000       0x1a
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000       0x1a c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_line    0x0000001a       0x62 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
- .debug_line    0x0000007c       0x98 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
- .debug_line    0x00000114       0x86 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_line    0x00000000       0x1a b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
 
 .debug_frame
  *(.debug_frame)
 
 .debug_str      0x00000000      0x208
  *(.debug_str)
- .debug_str     0x00000000      0x208 c:/users/jr/appdata/local/arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .debug_str     0x00000000      0x208 b:/avr_toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/crtatmega328p.o
 
 .debug_loc
  *(.debug_loc)
@@ -504,5 +577,5 @@ END GROUP
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(.\build\JTAG2UPDI.elf elf32-avr)
+OUTPUT(./build/JTAG2UPDI.elf elf32-avr)
 LOAD linker stubs

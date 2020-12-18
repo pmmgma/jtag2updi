@@ -160,6 +160,9 @@ namespace {
       case JTAG2::CMND_XMEGA_ERASE:
         JTAG2::erase();
         break;
+      case JTAG2::CMND_TERMINAL:
+        JTAG2::terminal();
+        break;		
       default:
         JTAG2::set_status(JTAG2::RSP_FAILED);
         break;

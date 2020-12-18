@@ -30,6 +30,17 @@ uint8_t JICE_io::put(char c) {
 #endif
 }
 
+
+bool JICE_io::dataavail() {
+#if defined XAVR
+  return (HOST_USART.STATUS & (1<<USART_RXCIF_bp))!=0; /* Wait until data exists. */
+#else
+  return (HOST_UCSRA & (1<<RXC))!=0;
+#endif
+	
+}
+
+
 uint8_t JICE_io::get(void) {
 #if defined XAVR
   loop_until_bit_set_or_host_timeout(HOST_USART.STATUS, USART_RXCIF_bp); /* Wait until data exists. */

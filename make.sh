@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # avr-gcc++ path
 # Replace by location of your avr-gcc compiler if different
-BINPATH="/usr/bin"
+BINPATH="/cygdrive/b/AVR_Toolchain/bin"
 INCPATH="./source"
 
 SOURCEPATH="./source"

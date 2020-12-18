@@ -12,6 +12,11 @@
 #include "sys.h"
 
 namespace JTAG2 {
+	
+  extern bool terminalmode;
+  extern uint8_t rxcnt;
+  extern uint8_t txcnt;
+	
 
   // *** Parameter IDs ***
   enum parameter {
@@ -61,6 +66,7 @@ namespace JTAG2 {
     CMND_ENTER_PROGMODE         = 0x14,
     CMND_LEAVE_PROGMODE         = 0x15,
     CMND_XMEGA_ERASE            = 0x34
+	CMND_TERMINAL               = 0x70
   };
   // *** JTAG Mk2 Single byte status responses ***
   enum response {
@@ -153,6 +159,9 @@ namespace JTAG2 {
   void get_parameter();
   void set_parameter();
   void set_device_descriptor();
+  void terminal();
+  void debug_terminalrx();
+  void debug_terminaltx(char ch);
 
   // *** ISP command functions ***
   void enter_progmode();
