@@ -65,7 +65,7 @@ namespace JTAG2 {
     CMND_GET_SYNC               = 0x0f,
     CMND_ENTER_PROGMODE         = 0x14,
     CMND_LEAVE_PROGMODE         = 0x15,
-    CMND_XMEGA_ERASE            = 0x34
+    CMND_XMEGA_ERASE            = 0x34,
 	CMND_TERMINAL               = 0x70
   };
   // *** JTAG Mk2 Single byte status responses ***
