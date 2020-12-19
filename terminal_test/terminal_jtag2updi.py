@@ -180,6 +180,7 @@ while runnning:
     ch=ser.read(1);
     if ch: print(ch.decode("utf-8",errors='replace') ,flush=True, end="")
         
-
+print("\n\nSign off...")
+x=SendRetry(ser, CMND_SIGN_OFF, RSP_OK );
 
 ser.close()             # close port
