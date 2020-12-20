@@ -157,8 +157,7 @@ x=SendRetry(ser, CMND_SET_DEVICE_DESCRIPTOR, RSP_OK );
 print("Enable debug terminal...")
 x=SendRetry(ser, CMND_TERMINAL, RSP_OK );
     
-print("Terminal running...")
-print("")
+print("Terminal running...\n",flush=True)
 
 runnning=1
 
