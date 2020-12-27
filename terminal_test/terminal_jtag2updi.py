@@ -137,7 +137,7 @@ def SendRetry(ser, body, ex_ans):
     return ans
 
 ser = serial.Serial()
-ser.port = "COM3"
+ser.port =sys.argv[1]
 ser.baudrate = 19200
 ser.timeout = 0.1
 ser.setDTR(False)
