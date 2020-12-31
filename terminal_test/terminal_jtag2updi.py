@@ -144,7 +144,7 @@ ser.setDTR(False)
 ser.open()
 
     
-print("Connecting at 19200.")
+print("Connecting at 19200 to "+ser.name+".")
 
 print("Sign on...")
 x=SendRetry(ser, CMND_GET_SIGN_ON, RSP_SIGN_ON );
