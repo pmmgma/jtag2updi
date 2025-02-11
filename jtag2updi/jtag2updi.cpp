@@ -6,10 +6,12 @@
  */
 
 // Includes
+#include <util/delay.h>
 #include "sys.h"
 #include "updi_io.h"
 #include "JICE_io.h"
 #include "JTAG2.h"
+#include "UPDI_lo_lvl.h"
 #include "dbg.h"
 #ifdef USE_WDT_RESET
   #include <avr/wdt.h>
@@ -44,6 +46,14 @@ namespace {
 
 
   inline void loop() {
+    #if (defined(USE_HV_PROGRAMMING) && (defined(__AVR_ATmega_Mini__) || defined(__AVR_ATmega_Mega__) || defined(__AVR_ATtiny_Zero_One__) || defined(__AVR_ATmega_Zero__) || defined(__AVR_DA__)))
+    //SYS::setPOWER();
+    //if (SYS::checkHVMODE() > 100) {  // if HV or PCHV mode, then apply HV pulse and UPDI enable sequence
+    SYS::pulseHV();
+    SYS::updiEnable();
+    //}
+    //SYS::checkOVERLOAD();
+    #endif
     #ifndef DISABLE_HOST_TIMEOUT
     uint8_t HostErrorCount=0;
     #endif
@@ -135,6 +145,9 @@ namespace {
         }
         JTAG2::ConnectedTo&=0xFD; // no longer talking to host either, anymore.
         set_status(JTAG2::RSP_OK);
+        #if (defined(USE_HV_PROGRAMMING) && (defined(__AVR_ATmega_Mini__) || defined(__AVR_ATmega_Mega__) || defined(__AVR_ATtiny_Zero_One__) || defined(__AVR_ATmega_Zero__) || defined(__AVR_DA__)))
+        //if (SYS::checkHVMODE() > 200) SYS::cyclePOWER();  // if PCHV mode, power-cycle target
+        #endif
         break;
       case JTAG2::CMND_LEAVE_PROGMODE:
         JTAG2::leave_progmode();
@@ -149,6 +162,13 @@ namespace {
         JTAG2::go();
         break;
       case JTAG2::CMND_SET_DEVICE_DESCRIPTOR:
+       #if (defined(USE_HV_PROGRAMMING) && (defined(__AVR_ATmega_Mini__) || defined(__AVR_ATmega_Mega__) || defined(__AVR_ATtiny_Zero_One__) || defined(__AVR_ATmega_Zero__) || defined(__AVR_DA__)))
+        //if (SYS::checkHVMODE() > 200) SYS::cyclePOWER();  // if PCHV mode, power-cycle target
+        //if (SYS::checkHVMODE() > 100) {  // if HV or PCHV mode, then apply HV pulse and UPDI enable sequence
+        SYS::pulseHV();
+        SYS::updiEnable();
+        //}
+        #endif
         JTAG2::set_device_descriptor();
         break;
       case JTAG2::CMND_READ_MEMORY:

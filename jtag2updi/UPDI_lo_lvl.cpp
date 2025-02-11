@@ -10,8 +10,8 @@
 #include "sys.h"
 #include "dbg.h"
 
-// _l  versions have long (24-bit) address poimter
-// otherwisem, address pointer is 16-bit
+// _l  versions have long (24-bit) address pointer
+// otherwise, address pointer is 16-bit
 
 
 
@@ -384,7 +384,7 @@ void UPDI::stinc_w(uint16_t data) {
 
 STINC noget variants
 For use when the RSD bit is set in control register A
-This is done to improve performance when doing busst writes
+This is done to improve performance when doing burst writes
 
 stinc_b_noget is copy of stinc_b without the get()
 

@@ -172,6 +172,7 @@ void JTAG2::set_parameter() {
         break;
       }
       // else fall through (invalid baud rate)
+      [[fallthrough]];
     default:
       set_status(RSP_ILLEGAL_PARAMETER);
       return;
@@ -224,6 +225,7 @@ void JTAG2::enter_progmode() {
         break;
       }
       /* fall-thru */
+      [[fallthrough]];
     // already in program mode
     case 0x08: //make sure we're really in programming mode
       if (nvm_version == 1) {
@@ -248,7 +250,7 @@ void JTAG2::enter_progmode() {
         NVM_v2::command<false>(NVM_v2::NOOP);
       }
       // Turn on LED to indicate program mode
-      SYS::setLED();
+      // SYS::setLED(); CHECK HERE
       #if defined(DEBUG_ON)
         // report the chip revision
         DBG::debug('R',UPDI::lds_b_l(0x0F01));
@@ -283,7 +285,7 @@ void JTAG2::leave_progmode() {
     /* fall-thru */
     case 0x82:
       // Turn off LED to indicate normal mode
-      SYS::clearLED();
+      // SYS::clearLED(); CHECK HERE
       if (reset_ok) {
         set_status(RSP_OK);
       } else {
@@ -623,6 +625,7 @@ namespace {
   }
 
   void include_extra_info (const uint8_t sernumlen) {
+    (void)sernumlen;
     #if defined(INCLUDE_EXTRA_INFO_JTAG)
     // get the REV ID - I believe (will be confirming with Microchip support) that this is the silicon revision ID
     // this is particularly important with some of these chips - the tinyAVR and megaAVR parts do have differences

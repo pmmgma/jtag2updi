@@ -16,6 +16,9 @@
 //Disable the response signature during burst writes to permit faster writes
 #define NO_ACK_WRITE
 
+// If using a device based on the HV programmer designed by dlloyd (@Dlloyddev on github), enable that functionality
+//#define USE_HV_PROGRAMMING
+
 // Disable the host timeout - this is required for use with avrdude in terminal mode (-t)
 // but with this disabled, can get "stuck" if communication with host is interrupted at 115200 baud
 // as avrdude on next start will try to communicate at 19200 baud. Reset is required to fix this.
@@ -71,6 +74,14 @@
   #define LED2_PORT A
   #define LED2_PIN 6
 
+  #if defined(USE_HV_PROGRAMMING)
+  // Dickson charge pump pins
+  # define cpp PIN3_bm // charge pump power or HV Enable, PA3
+  # define cp1 PIN4_bm // charge pump clock 1, PA4
+  # define cp2 PIN5_bm // charge pump clock 2, PA5
+  # define cps PIN1_bm // charge pump shutdown, PB1
+  #endif
+
   //USARTDEBUG not practical here because only one UART.
   //    #define USE_SPIDEBUG
 
@@ -120,6 +131,21 @@
 //  #define DEBUG_USART USART1
 //  #define DEBUG_BAUDRATE 2000000UL
 
+  #define LED_PORT A
+  #define LED_PIN 7
+
+  //Second LED is used to indicate NVM version, or as an additional debugging aid.
+  # define LED2_PORT A
+  # define LED2_PIN 6
+
+  #if defined(USE_HV_PROGRAMMING)
+  // Dickson charge pump pins
+  # define cpp PIN0_bm // charge pump power or HV Enable, PC0
+  # define cp1 PIN1_bm // charge pump clock 1, PC1
+  # define cp2 PIN2_bm // charge pump clock 2, PC2
+  # define cps PIN3_bm // charge pump shutdown, PC3
+  #endif
+
 #endif
 
 
@@ -131,6 +157,14 @@
 #if defined(__AVR_ATtiny_Zero_One__)
 // tinyAVR 0-series and 1-series parts
 
+  # ifndef HVLED_PORT
+  #   define HVLED_PORT A
+  # endif
+
+  # ifndef HVLED_PIN
+  #   define HVLED_PIN 6
+  # endif
+
   # ifndef UPDI_PORT
   #   define UPDI_PORT B
   # endif
@@ -140,11 +174,11 @@
   # endif
 
   # ifndef LED_PORT
-  #   define LED_PORT B
+  #   define LED_PORT A
   # endif
 
   # ifndef LED_PIN
-  #   define LED_PIN 1
+  #   define LED_PIN 7
   # endif
 
   # ifndef HOST_USART
@@ -190,17 +224,34 @@
 #elif defined (__AVR_ATmega_Mini__) || defined(ARDUINO_AVR_LARDU_328E)
 // For ATmega8/88/168/328 (P, PB) parts
 
+  # ifndef HVLED_PORT
+  #   define HVLED_PORT B
+  # endif
+
+  # ifndef HVLED_PIN
+  #   define HVLED_PIN 0
+  # endif
+
   # ifndef HOST_USART
   #   define HOST_USART 0
   # endif
 
   # ifndef UPDI_PORT
-  #   define UPDI_PORT D
+  #   define UPDI_PORT B
   # endif
 
   # ifndef UPDI_PIN
-  #   define UPDI_PIN 6
+  #   define UPDI_PIN 4
   # endif
+  
+  #ifndef HV_PORT 
+  #   define HV_PORT B
+  #endif
+  
+  #ifndef HV_PIN 
+  #   define HV_PIN 3
+  #endif
+
 
   #ifdef USE_SPIDEBUG
 
@@ -222,13 +273,25 @@
     #   define LED_PIN 5
     # endif
 
+    # ifndef LED2_PORT
+    #   define LED2_PORT D
+    # endif
+
+    # ifndef LED2_PIN
+    #   define LED2_PIN 7
+    # endif
+
   #endif
 
 #elif defined (__AVR_ATmega_Mega__)
 // 2560 and that family, like the ones used on the Arduino Mega
 
-  # ifndef HOST_USART
-  #   define HOST_USART 0
+# ifndef HVLED_PORT
+  #   define HVLED_PORT K
+  # endif
+
+  # ifndef HVLED_PIN
+  #   define HVLED_PIN 0
   # endif
 
   # ifndef UPDI_PORT
@@ -247,25 +310,47 @@
   #   define LED_PIN 7
   # endif
 
+  #  ifndef HOST_USART
+  #   define HOST_USART 0
+  # endif
+
+  # ifndef HOST_TX_PORT
+  #   define HOST_TX_PORT E
+  # endif
+
+  # ifndef HOST_TX_PIN
+  #   define HOST_TX_PIN 1
+  # endif
+
+  # ifndef HOST_RX_PIN
+  #   define HOST_RX_PIN 0
+  # endif
 
 #elif defined (__AVR_ATmega_Zero__ ) || defined( __AVR_DA__)
 // 4808, 4809. and the rest of the megaAVR 0-series
 
+  # ifndef HVLED_PORT
+  #   define HVLED_PORT A
+  # endif
+
+  # ifndef HVLED_PIN
+  #   define HVLED_PIN 6
+  # endif
 
   # ifndef UPDI_PORT
-  #   define UPDI_PORT B
+  #   define UPDI_PORT A
   # endif
 
   # ifndef UPDI_PIN
-  #   define UPDI_PIN 0
+  #   define UPDI_PIN 3
   # endif
 
   # ifndef LED_PORT
-  #   define LED_PORT B
+  #   define LED_PORT A
   # endif
 
   # ifndef LED_PIN
-  #   define LED_PIN 1
+  #   define LED_PIN 7
   # endif
 
   # ifndef HOST_USART
@@ -451,6 +536,19 @@ namespace SYS {
   void clearLED(void);
   void setVerLED(void);
   void clearVerLED(void);
+  void setHVLED(void);
+  void clearHVLED(void);
+  void pulseHV(void);
+  void updiTriState(void);
+  void updiHigh(void);
+  void updiIdle(void);
+  void updiInitiate(void);
+  void updiEnable(void);
+  void setPOWER(void);
+  void clearPOWER(void);
+  void cyclePOWER(void);
+  void checkOVERLOAD(void);
+  uint8_t checkHVMODE();
 }
 
 #endif /* SYS_H_ */

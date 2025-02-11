@@ -103,7 +103,7 @@
       #define SSPIN 4
     #endif
 
-  #endif //emd of SPIDEBUG section for XTINY
+  #endif //end of SPIDEBUG section for XTINY
 
   #ifdef USE_USARTDEBUG
     #error "Only has one USART!"
@@ -207,7 +207,7 @@
       #define SSPIN 7
     #endif
 
-  #endif //emd of SPIDEBUG
+  #endif //end of SPIDEBUG
   #ifdef USE_USARTDEBUG
     #define DEBUG_TX_PIN 0
     #define DEBUG_RX_PIN 1
@@ -386,34 +386,34 @@ namespace DBG {
 
 namespace DBG {
   inline void initDebug(){}
-  inline void updi_st_ptr_l(uint32_t address){}
-  inline void updi_st_ptr_w(uint16_t address){}
-  inline void updi_lds(uint32_t address){}
-  inline void updi_lds(uint16_t address){}
-  inline void updi_sts(uint32_t address, uint16_t data){}
-  inline void updi_sts(uint32_t address, uint8_t data){}
-  inline void updi_sts(uint16_t address, uint16_t data){}
-  inline void updi_sts(uint16_t address, uint8_t data){}
+  inline void updi_st_ptr_l(uint32_t address){(void)address;}
+  inline void updi_st_ptr_w(uint16_t address){(void)address;}
+  inline void updi_lds(uint32_t address){(void)address;}
+  inline void updi_lds(uint16_t address){(void)address;}
+  inline void updi_sts(uint32_t address, uint16_t data){(void)address;(void)data;}
+  inline void updi_sts(uint32_t address, uint8_t data){(void)address;(void)data;}
+  inline void updi_sts(uint16_t address, uint16_t data){(void)address;(void)data;}
+  inline void updi_sts(uint16_t address, uint8_t data){(void)address;(void)data;}
   inline void updi_key(){}
-  inline void updi_rep(uint8_t reps){}
-  inline void updi_stcs(uint8_t command, uint8_t data){}
-  inline void updi_ldcs(uint8_t command){}
-  inline void updi_res(uint32_t data, uint8_t isaddr=1){}
-  inline void updi_res(uint16_t data, uint8_t isaddr=0){}
-  inline void updi_res(uint8_t data){}
+  inline void updi_rep(uint8_t reps){(void)reps;}
+  inline void updi_stcs(uint8_t command, uint8_t data){(void)command;(void)data;}
+  inline void updi_ldcs(uint8_t command){(void)command;}
+  inline void updi_res(uint32_t data, uint8_t isaddr=1){(void)data;(void)isaddr;}
+  inline void updi_res(uint16_t data, uint8_t isaddr=0){(void)data;(void)isaddr;}
+  inline void updi_res(uint8_t data){(void)data;}
   inline void updi_reset(){}
   inline void updi_reset_off(){}
   inline void updi_reset_on(){}
-  inline void updi_post_reset(uint8_t mode){}
-  inline void debug(const char *str, uint8_t newline=1){}
-  inline void debug(const uint8_t *data, size_t length, uint8_t newline=0, uint8_t ashex=0){}
-  inline void debugWriteStr(const char *str){}
-  inline void debugWriteBytes(const uint8_t *data, size_t length, uint8_t ashex=0){}
-  inline void debugWriteByte(uint8_t databyte){}
-  inline void debugWriteHex(uint8_t databyte){}
-  inline void debug(char prefix, uint8_t data0){}
-  inline void debug(char prefix, uint8_t data0, uint8_t data1){}
-  inline void debug(char prefix, uint8_t data0, uint8_t data1, uint8_t data2){}
+  inline void updi_post_reset(uint8_t mode){(void)mode;}
+  inline void debug(const char *str, uint8_t newline=1){(void)str;(void)newline;}
+  inline void debug(const uint8_t *data, size_t length, uint8_t newline=0, uint8_t ashex=0){(void)data;(void)length;(void)newline;(void)ashex;}
+  inline void debugWriteStr(const char *str){(void)str;}
+  inline void debugWriteBytes(const uint8_t *data, size_t length, uint8_t ashex=0){(void)data;(void)length;(void)ashex;}
+  inline void debugWriteByte(uint8_t databyte){(void)databyte;}
+  inline void debugWriteHex(uint8_t databyte){(void)databyte;}
+  inline void debug(char prefix, uint8_t data0){(void)prefix;(void)data0;}
+  inline void debug(char prefix, uint8_t data0, uint8_t data1){(void)prefix;(void)data0;(void)data1;}
+  inline void debug(char prefix, uint8_t data0, uint8_t data1, uint8_t data2){(void)prefix;(void)data0;(void)data1;(void)data2;}
 }
 
 #endif

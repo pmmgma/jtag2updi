@@ -149,15 +149,19 @@ print("Connecting at 19200 to "+ser.name+".")
 print("Sign on...")
 x=SendRetry(ser, CMND_GET_SIGN_ON, RSP_SIGN_ON );
 
-
 print("Reset UPDI interface...")
 x=SendRetry(ser, CMND_SET_DEVICE_DESCRIPTOR, RSP_OK );
+
+#print("Reset Device...")
+#x=SendRetry(ser, CMND_ENTER_PROGMODE, RSP_OK );
+#x=SendRetry(ser, CMND_LEAVE_PROGMODE, RSP_OK );
+
 
    
 print("Enable debug terminal...")
 x=SendRetry(ser, CMND_TERMINAL, RSP_OK );
     
-print("Terminal running...\n",flush=True)
+print("Terminal running... CTRL-D to close\n",flush=True)
 
 runnning=1
 
@@ -166,8 +170,9 @@ def thread_function(name):
     while True:
         ch=msvcrt.getch()
         if ch: 
-            if ch==b'\x03': break
+            if ch==b'\x04': break
             ser.write(ch)
+            time.sleep(0.01)
             
     runnning=0
     
@@ -179,7 +184,7 @@ while runnning:
     ch=ser.read(1);
     if ch: print(ch.decode("utf-8",errors='ignore') ,flush=True, end="")
         
-print("\n\nSign off...")
 x=SendRetry(ser, CMND_SIGN_OFF, RSP_OK );
+print("Sign off...",flush=True)
 
 ser.close()             # close port
